@@ -37,6 +37,7 @@ fintoc_libs_path = os.path.join(fintoc_directory_path, "libs")
 if fintoc_libs_path not in sys.path:
     sys.path.append(fintoc_libs_path)
 
+global fintoc
 
 class Fintoc:
     
@@ -65,7 +66,7 @@ class Fintoc:
         
         if status:
             url += "?status={}".format(status)
-        
+
         r = requests.get(url, headers=self.headers)
         return r.json()
     
@@ -111,54 +112,63 @@ module = GetParams("module")
 
 try:
     if module == "config":
-        api_key = GetParams("secret_key")
-        account_id = GetParams("account_id")
-        fintoc = Fintoc(account_id, api_key)
-        SetVar("result", fintoc)
+        try:
+            api_key = GetParams("secret_key")
+            result = GetParams("result")
+        
+            fintoc = Fintoc(api_key)
+            
+            SetVar(result, True)
+            
+        except Exception as e:
+            SetVar(result, False)
+            PrintException()
+            raise e
+        
     
     if module == "listLinks":
         status = GetParams("status")
-        result = GetVar("result")
+        result = GetParams("result")
         
-        SetVar("result", result.listLinks(status))
+        SetVar(result, fintoc.listLinks(status))
     
     if module == "retrieveLink":
         link_token = GetParams("link_token")
-        result = GetVar("result")
+        result = GetParams("result")
         
-        SetVar("result", result.retrieveLink(link_token))
+        SetVar(result, fintoc.retrieveLink(link_token))
         
     if module == "listInvoices":
         link_token = GetParams("link_token")
-        result = GetVar("result")
+        result = GetParams("result")
         
-        SetVar("result", result.listInvoices(link_token))
+        SetVar(result, fintoc.listInvoices(link_token))
         
     if module == "listAccounts":
         link_token = GetParams("link_token")
-        result = GetVar("result")
+        result = GetParams("result")
         
-        SetVar("result", result.listAccounts(link_token))
+        SetVar(result, fintoc.listAccounts(link_token))
     
     if module == "retrieveAccount":
         account_id = GetParams("account_id")
-        result = GetVar("result")
+        result = GetParams("result")
         
-        SetVar("result", result.retrieveAccount(account_id))
+        SetVar(result, fintoc.retrieveAccount(account_id))
         
     if module == "listMovements":
         account_id = GetParams("account_id")
         link_token = GetParams("link_token")
-        result = GetVar("result")
+        result = GetParams("result")
         
-        SetVar("result", result.listMovements(account_id, link_token))
+        SetVar(result, fintoc.listMovements(account_id, link_token))
         
     if module == "retrieveMovement":
         movement_id = GetParams("movement_id")
         account_id = GetParams("account_id")
-        result = GetVar("result")
+        result = GetParams("result")
         
-        SetVar("result", result.retrieveMovement(movement_id, account_id))
+        SetVar(result, fintoc.retrieveMovement(movement_id, account_id))
     
 except Exception as e:
     traceback.print_exc()
