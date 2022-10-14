@@ -9,6 +9,11 @@ Módulo para conectarse a Fintoc
 __Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de Rocketbot.  
 
 
+## Como usar este modulo
+
+1. Se debe obtener previamente el link_token de los Links que hayan conectado con su cuenta de Fintoc. Las consultas sobre los links que se realicen desde el módulo siempre devolverán el link_token con valor Null, por lo que no se puede obtener el link_token de un link que ya se haya conectado. Estos link_token sólamente se pueden obtener una vez, si se pierde el link_token, se debe volver a conectar el link con su cuenta de Fintoc. 
+2. Para poder conectarse, deberán consultar su Secret key desde la sección de API Keys de su cuenta de Fintoc.
+
 
 ## Overview
 

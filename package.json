@@ -2,7 +2,7 @@
     "author": "Nicolas Garcia",
     "description": "Módulo para conectarse a Fintoc",
     "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
     "homepage": "http://rocketbot.co/",
     "linux": true,
@@ -149,6 +149,31 @@
                             "pr": "Opcional. Pode ser active, inactive ou um status personalizado."
                         },
                         "id": "status",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "checkbox",
+                        "placeholder": {
+                            "es": "True",
+                            "en": "True",
+                            "pr": "True"
+                        },
+                        "title": {
+                            "es": "Obtener unicamente el ID",
+                            "en": "Get only the ID",
+                            "pr": "Obter apenas o ID"
+                        },
+                        "description": {
+                            "es": "Marca para obtener unicamente el ID y no toda la información de los links.",
+                            "en": "Check to get only the ID and not all the information of the links.",
+                            "pr": "Marque para obter apenas o ID e não toda a informação dos links."
+                        },
+                        "help": {
+                            "es": "Si se desmarca, traerá toda la información disponible de todos los links.",
+                            "en": "If unchecked, it will bring all the available information of all the links.",
+                            "pr": "Se desmarcado, trará toda a informação disponível de todos os links."
+                        },
+                        "id": "only_id",
                         "css": "col-md-6"
                     },
                     {
@@ -401,6 +426,31 @@
                         "css": "col-md-6"
                     },
                     {
+                        "type": "checkbox",
+                        "placeholder": {
+                            "es": "True",
+                            "en": "True",
+                            "pr": "True"
+                        },
+                        "title": {
+                            "es": "Obtener unicamente el ID",
+                            "en": "Get only the ID",
+                            "pr": "Obter apenas o ID"
+                        },
+                        "description": {
+                            "es": "Marca para obtener unicamente el ID y no toda la información de las cuentas.",
+                            "en": "Check to get only the ID and not all the information of the accounts.",
+                            "pr": "Marque para obter apenas o ID e não toda a informação das contas."
+                        },
+                        "help": {
+                            "es": "Si se desmarca, traerá toda la información disponible de todas las cuentas",
+                            "en": "If unchecked, it will bring all the available information of all the accounts",
+                            "pr": "Se desmarcado, trará toda a informação disponível de todas as contas"
+                        },
+                        "id": "only_id",
+                        "css": "col-md-6"
+                    },
+                    {
                         "type": "input",
                         "placeholder": {
                             "es": "result",
@@ -481,6 +531,26 @@
                             "pr": "ID da conta que deseja obter."
                         },
                         "id": "account_id",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "link_Q0xVGPvijElLRMwE_token_FhsFVurz5q5FycHA5xxhTpzX",
+                            "en": "link_Q0xVGPvijElLRMwE_token_FhsFVurz5q5FycHA5xxhTpzX",
+                            "pr": "link_Q0xVGPvijElLRMwE_token_FhsFVurz5q5FycHA5xxhTpzX"
+                        },
+                        "title": {
+                            "es": "Link Token",
+                            "en": "Link Token",
+                            "pr": "Link Token"
+                        },
+                        "description": {
+                            "es": "Token del Link que contiene las Cuentas a listar.",
+                            "en": "Token of the Link that contains the Accounts to list.",
+                            "pr": "Token do Link que contém as contas a listar."
+                        },
+                        "id": "link_token",
                         "css": "col-md-6"
                     },
                     {
@@ -587,6 +657,31 @@
                         "css": "col-md-6"
                     },
                     {
+                        "type": "checkbox",
+                        "placeholder": {
+                            "es": "True",
+                            "en": "True",
+                            "pr": "True"
+                        },
+                        "title": {
+                            "es": "Obtener unicamente el ID",
+                            "en": "Get only the ID",
+                            "pr": "Obter apenas o ID"
+                        },
+                        "description": {
+                            "es": "Marca para obtener unicamente el ID y no toda la información de las cuentas.",
+                            "en": "Check to get only the ID and not all the information of the accounts.",
+                            "pr": "Marque para obter apenas o ID e não toda a informação das contas."
+                        },
+                        "help": {
+                            "es": "Si se desmarca, traerá toda la información disponible de todas las cuentas",
+                            "en": "If unchecked, it will bring all the available information of all the accounts",
+                            "pr": "Se desmarcado, trará toda a informação disponível de todas as contas"
+                        },
+                        "id": "only_id",
+                        "css": "col-md-6"
+                    },
+                    {
                         "type": "input",
                         "placeholder": {
                             "es": "result",
@@ -687,6 +782,26 @@
                             "pr": "ID da conta que contém o movimento"
                         },
                         "id": "account_id",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "link_Q0xVGPvijElLRMwE_token_FhsFVurz5q5FycHA5xxhTpzX",
+                            "en": "link_Q0xVGPvijElLRMwE_token_FhsFVurz5q5FycHA5xxhTpzX",
+                            "pr": "link_Q0xVGPvijElLRMwE_token_FhsFVurz5q5FycHA5xxhTpzX"
+                        },
+                        "title": {
+                            "es": "Link Token",
+                            "en": "Link Token",
+                            "pr": "Link Token"
+                        },
+                        "description": {
+                            "es": "Link Token asociado a la cuenta de la cual se desea obtener el movimiento.",
+                            "en": "Link Token associated with the account from which you want to get the movement.",
+                            "pr": "Link Token associado à conta da qual deseja obter o movimento."
+                        },
+                        "id": "link_token",
                         "css": "col-md-6"
                     },
                     {

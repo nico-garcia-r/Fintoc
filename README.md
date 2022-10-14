@@ -9,6 +9,11 @@ Module to connect to Fintoc
 __Download__ and __install__ the content in 'modules' folder in Rocketbot path  
 
 
+## How to use this module
+
+1. You must previously obtain the link_token of the links that have connected to your Fintoc account. Queries on the links that are made from the module will always return the link_token with Null value, so you can not get the link_token of a link that has already been connected. These link_token can only be obtained once, if the link_token is lost, you must reconnect the link with your Fintoc account. 
+2. In order to connect, you will need to consult your Secret key from the API Keys section of your Fintoc account.
+
 
 ## Overview
 
